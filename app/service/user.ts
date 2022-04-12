@@ -11,7 +11,7 @@ export default class User extends Service {
 
   findByEmail(email: string, scope?: string) {
     if (scope) {
-      return this.User.scope(scope).findOne<>({ where: { email } });
+      return this.User.scope(scope).findOne({ where: { email } });
     }
     return this.User.findOne({ where: { email } });
   }
